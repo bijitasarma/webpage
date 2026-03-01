@@ -88,20 +88,41 @@
             text-transform: uppercase;
             color: #800000;
         }
+
+        /* Details styling for abstracts */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
     </style>
 </head>
 <body class="flex flex-col min-h-screen">
 
     <!-- TOP NAVIGATION BAR -->
-    <nav class="sticky top-0 z-50 top-nav py-4 md:py-6 bg-white/95 backdrop-blur-sm">
+    <nav class="sticky top-0 z-50 top-nav py-4 md:py-6 bg-white/95 backdrop-blur-sm shadow-sm">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <!-- Brand -->
-            <div class="flex items-center gap-3 cursor-pointer group" onclick="switchTab('home')">
-                <div class="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center font-serif font-bold text-xl group-hover:bg-[#800000] transition-colors">C</div>
-                <div class="text-center md:text-left">
-                    <h1 class="font-serif font-bold text-lg tracking-wide leading-none text-black">QCQT Group</h1>
-                    <p class="text-[10px] uppercase tracking-widest text-gray-500 mt-1">Chennai Mathematical Institute</p>
+            <!-- Brand / Logo -->
+            <div class="flex items-center gap-2 cursor-pointer group" onclick="switchTab('home')">
+                
+                <!-- Innovative Logo: Dirac Ket Notation |QCQT⟩ -->
+                <!-- Ket Left '|' -->
+                <svg class="h-10 w-3 text-gray-300 group-hover:text-[#800000] transition-colors duration-500" viewBox="0 0 20 100" fill="none" stroke="currentColor">
+                    <line x1="10" y1="10" x2="10" y2="90" stroke-width="8" stroke-linecap="round"/>
+                </svg>
+                
+                <!-- Core Text -->
+                <div class="flex flex-col items-center justify-center pt-1 px-1">
+                    <h1 class="font-serif font-bold text-2xl tracking-[0.15em] leading-none text-gray-900 group-hover:text-black transition-colors duration-300">QCQT</h1>
+                    <p class="text-[8.5px] uppercase tracking-[0.25em] text-[#800000] mt-1 font-bold">Research Group</p>
                 </div>
+
+                <!-- Ket Right '⟩' -->
+                <svg class="h-10 w-4 text-gray-300 group-hover:text-[#800000] transition-colors duration-500" viewBox="0 0 30 100" fill="none" stroke="currentColor">
+                    <polyline points="5,10 25,50 5,90" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
             </div>
 
             <!-- Menu -->
@@ -127,104 +148,126 @@
                     
                     <!-- Left Column: Bio with Photo (4 cols) -->
                     <div class="lg:col-span-4">
-                        <div class="sticky top-24">
-                            <img src="https://api.dicebear.com/7.x/initials/svg?seed=BS&backgroundColor=800000" class="w-48 h-48 md:w-full md:h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-md mb-8 rounded-sm mx-auto md:mx-0">
+                        <div class="sticky top-28">
+                            <img src="assets/group_members/pi/bs-01.jpg" onerror="this.src='assets/group_members/pi/bs01.jpg'" class="w-48 h-48 md:w-full md:h-auto object-cover transition-all duration-500 shadow-md mb-8 rounded-sm mx-auto md:mx-0">
                             
                             <h2 class="serif text-3xl font-bold text-gray-900 mb-2">Bijita Sarma</h2>
-                            <p class="text-xs uppercase tracking-widest text-gray-500 mb-6 font-bold">Principal Investigator</p>
-                            
-                            <div class="prose text-gray-600 leading-relaxed text-base font-light mb-8">
-                                <p class="mb-4">
-                                    I am an Assistant Professor at the <strong>Chennai Mathematical Institute (CMI)</strong>, leading the Quantum Computing and Quantum Technology (QCQT) Group.
-                                </p>
-                                <p class="mb-4">
-                                    My research focuses on the intersection of <strong>Quantum Control</strong>, <strong>Error Correction</strong>, and <strong>Machine Learning</strong>. Previously, I was a Postdoctoral Researcher at the Max Planck Institute for the Science of Light (Germany) and OIST (Japan).
-                                </p>
-                            </div>
+                            <p class="text-xs uppercase tracking-widest text-gray-500 mb-6 font-bold">Assistant Professor, <br> Chennai Mathematical Institute (CMI) </p>
 
                             <div class="flex flex-col gap-4">
-                                <a href="mailto:bijita@cmi.ac.in" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#800000] border-b border-[#800000] pb-1 hover:text-black hover:border-black transition-colors w-max">
+                                <a href="mailto:bijita.sarma@cmi.ac.in" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#800000] border-b border-[#800000] pb-1 hover:text-black hover:border-black transition-colors w-max">
                                     Contact Me <i data-lucide="arrow-right" class="w-3 h-3"></i>
                                 </a>
                                 <div class="flex gap-4 mt-2">
-                                    <a href="#" class="text-gray-400 hover:text-[#0077b5] transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-                                    <a href="#" class="text-gray-400 hover:text-black transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
-                                    <a href="#" class="text-gray-400 hover:text-black transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                                    <a href="https://de.linkedin.com/in/bijita-sarma-95826b69" target="_blank" class="text-gray-400 hover:text-[#0077b5] transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                                    <a href="#" target="_blank" class="text-gray-400 hover:text-black transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                                    <a href="https://github.com/bijitasarma" target="_blank" class="text-gray-400 hover:text-black transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                                    <a href="https://scholar.google.co.in/citations?hl=en&user=1pE-QQMAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="text-gray-400 hover:text-[#4285F4] transition-colors" title="Google Scholar"><i data-lucide="graduation-cap" class="w-5 h-5"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Right Column: Research Highlights & Announcements (8 cols) -->
-                    <div class="lg:col-span-8 space-y-16">
+                    <!-- Right Column: Content (8 cols) -->
+                    <div class="lg:col-span-8 space-y-20">
                         
                         <!-- Intro Header -->
                         <div>
                             <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6 leading-tight">
-                                Quantum Computing &<br><span class="text-[#800000]">Quantum Technology</span>
+                                <span class="text-[#800000]">Quantum Computing and Quantum Technology</span>
                             </h1>
                             <p class="text-xl text-gray-600 font-light leading-relaxed max-w-2xl">
-                                We are dedicated to bridging the gap between theoretical quantum algorithms and physical device implementation through advanced control and learning protocols.
+                                We explore and engineer the quantum world across scales, from photons and phonons to superconducting circuits, to build the next generation of intelligent quantum technologies. Our vision is to push quantum computing, sensing, and metrology from theory to real devices by combining cutting‑edge quantum control, error correction, and superconducting architectures with powerful machine‑learning tools. We design fast, high‑fidelity quantum gates, variational and simulation algorithms, and quantum‑enhanced protocols, while developing machine learning for quantum and quantum machine learning side by side. At the same time, we remain deeply rooted in fundamental quantum physics: quantum optics, optomechanics, magnonics, and cavity QED, where ideas like unconventional blockade, ground‑state cooling, and hybrid opto‑magno‑mechanical platforms inspire new interdisciplinary ways to sense, process, and harness information from a distinctly quantum angle.
                             </p>
                         </div>
 
-                        <!-- Key Research Areas (Grid) -->
+                        <!-- Key Research Areas -->
                         <div>
                             <h3 class="serif text-2xl font-bold text-gray-900 mb-8 border-b border-gray-200 pb-4">Focus Areas</h3>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <!-- Card 1 -->
                                 <div class="group cursor-pointer" onclick="switchTab('research')">
-                                    <div class="h-48 overflow-hidden mb-4 bg-gray-100 relative">
-                                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0">
-                                    </div>
-                                    <h4 class="serif text-xl font-bold text-gray-900 group-hover:text-[#800000] transition-colors">Quantum Control</h4>
-                                    <p class="text-sm text-gray-600 mt-2 leading-relaxed">RL-based pulse shaping for robust operations.</p>
+                                    <h4 class="serif text-xl font-bold text-gray-900 group-hover:text-[#800000] transition-colors">Quantum Error Correction</h4>
+                                    <p class="text-sm text-gray-600 mt-2 leading-relaxed">RL-powered pulse shaping and continuous-time protocols for robust, fault-tolerant operations on noisy superconducting processors.</p>
                                 </div>
-                                <!-- Card 2 -->
                                 <div class="group cursor-pointer" onclick="switchTab('research')">
-                                    <div class="h-48 overflow-hidden mb-4 bg-gray-100 relative">
-                                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0">
-                                    </div>
-                                    <h4 class="serif text-xl font-bold text-gray-900 group-hover:text-[#800000] transition-colors">Error Correction</h4>
-                                    <p class="text-sm text-gray-600 mt-2 leading-relaxed">Autonomous feedback protocols for NISQ.</p>
+                                    <h4 class="serif text-xl font-bold text-gray-900 group-hover:text-[#800000] transition-colors">Quantum Control & Gates</h4>
+                                    <p class="text-sm text-gray-600 mt-2 leading-relaxed">Fast, high-fidelity gate design in multilevel superconducting circuits using optimal control and deep reinforcement learning.</p>
+                                </div>
+                                <div class="group cursor-pointer" onclick="switchTab('research')">
+                                    <h4 class="serif text-xl font-bold text-gray-900 group-hover:text-[#800000] transition-colors">Quantum Algorithms & QML</h4>
+                                    <p class="text-sm text-gray-600 mt-2 leading-relaxed">Variational optimization, quantum simulations, and quantum machine learning architectures tailored to near-term hardware.</p>
+                                </div>
+                                <div class="group cursor-pointer" onclick="switchTab('research')">
+                                    <h4 class="serif text-xl font-bold text-gray-900 group-hover:text-[#800000] transition-colors">Quantum Sensing & Metrology</h4>
+                                    <p class="text-sm text-gray-600 mt-2 leading-relaxed">Quantum-enhanced sensing protocols and precision metrology using hybrid opto–magno–mechanical and cavity-QED platforms.</p>
+                                </div>
+                                <div class="group cursor-pointer" onclick="switchTab('research')">
+                                    <h4 class="serif text-xl font-bold text-gray-900 group-hover:text-[#800000] transition-colors">Superconducting Circuits</h4>
+                                    <p class="text-sm text-gray-600 mt-2 leading-relaxed">Design and control of multiqubit superconducting architectures, couplers, and fluxonium/transmon devices for scalable quantum processors.</p>
+                                </div>
+                                <div class="group cursor-pointer" onclick="switchTab('research')">
+                                    <h4 class="serif text-xl font-bold text-gray-900 group-hover:text-[#800000] transition-colors">Quantum Optics & Optomechanics</h4>
+                                    <p class="text-sm text-gray-600 mt-2 leading-relaxed">Nonclassical light and mechanics, ground-state cooling, and blockade phenomena in cavity optomechanical and related platforms.</p>
+                                </div>
+                                <div class="group cursor-pointer md:col-span-2" onclick="switchTab('research')">
+                                    <h4 class="serif text-xl font-bold text-gray-900 group-hover:text-[#800000] transition-colors">Magnonics & Cavity QED</h4>
+                                    <p class="text-sm text-gray-600 mt-2 leading-relaxed max-w-xl">Hybrid magnon–photon–phonon systems for quantum information processing, sensing, and cavity-QED-inspired quantum technologies.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Highlights & News -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                            <!-- Highlights -->
+                        <!-- Featured Highlights Section (Injected via JS) -->
+                        <div>
+                            <div class="flex justify-between items-end border-b border-gray-200 pb-4 mb-8">
+                                <h3 class="serif text-2xl font-bold text-gray-900">Recent Highlights</h3>
+                                <button onclick="switchTab('research')" class="text-xs font-bold uppercase tracking-widest text-[#800000] hover:text-black transition-colors">View All Publications &rarr;</button>
+                            </div>
+                            <div id="home-highlights-container" class="space-y-10">
+                                <!-- Featured Paper Cards will be populated here by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Group News & Announcements Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-gray-200 pt-16">
+                            <!-- Group News -->
                             <div>
-                                <h3 class="serif text-xl font-bold text-gray-900 mb-6">Recent Highlights</h3>
+                                <h3 class="serif text-xl font-bold text-gray-900 mb-6 flex items-center gap-2"><i data-lucide="newspaper" class="w-5 h-5 text-[#800000]"></i> Group News</h3>
                                 <div class="space-y-6">
                                     <div class="group">
-                                        <p class="news-date mb-1">Jan 2025</p>
-                                        <a href="#" class="serif text-base font-bold leading-tight group-hover:text-[#800000] transition-colors block">PRL Publication</a>
-                                        <p class="text-sm text-gray-500 mt-1">"Non-Markovian feedback for optimized quantum error correction" published.</p>
+                                        <p class="news-date mb-1">March 2026</p>
+                                        <p class="text-sm text-gray-700 leading-relaxed">Dr. Sarma will be giving a talk on machine learning algorithms for quantum error correction at the APS March Meeting.</p>
                                     </div>
                                     <div class="group">
-                                        <p class="news-date mb-1">Dec 2024</p>
-                                        <a href="#" class="serif text-base font-bold leading-tight group-hover:text-[#800000] transition-colors block">Best Poster Award</a>
-                                        <p class="text-sm text-gray-500 mt-1">Arjun Rao wins at QML Workshop Zurich.</p>
+                                        <p class="news-date mb-1">January 2026</p>
+                                        <p class="text-sm text-gray-700 leading-relaxed">A warm welcome to our new PhD students joining the group this semester to work on superconducting architectures!</p>
+                                    </div>
+                                    <div class="group">
+                                        <p class="news-date mb-1">December 2025</p>
+                                        <p class="text-sm text-gray-700 leading-relaxed">Congratulations to Arjun Rao for winning the Best Poster Award at the QML Workshop in Zurich.</p>
+                                    </div>
+                                    <div class="group">
+                                        <p class="news-date mb-1">November 2025</p>
+                                        <p class="text-sm text-gray-700 leading-relaxed">Our latest preprint on scalable fluxonium-transmon architectures has just been posted on arXiv.</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Announcements -->
-                            <div class="bg-gray-50 p-6 border-l-2 border-[#800000]">
-                                <h3 class="serif text-xl font-bold text-gray-900 mb-4">Announcements</h3>
+                            <div class="bg-gray-50 p-8 rounded-lg border border-gray-100 shadow-sm relative overflow-hidden">
+                                <div class="absolute top-0 right-0 w-16 h-16 bg-[#800000]/10 rounded-bl-full"></div>
+                                <h3 class="serif text-xl font-bold text-gray-900 mb-6 flex items-center gap-2"><i data-lucide="bell-ring" class="w-5 h-5 text-[#800000]"></i> Announcements</h3>
                                 <div class="space-y-6">
-                                    <div>
-                                        <span class="inline-block px-2 py-1 bg-black text-white text-[10px] font-bold uppercase tracking-wider mb-2">Opening</span>
-                                        <h4 class="font-bold text-sm text-gray-900">PhD Positions Available</h4>
-                                        <p class="text-xs text-gray-600 mt-1 mb-2">Looking for motivated students in QEC and RL.</p>
-                                        <a href="mailto:bijita@cmi.ac.in" class="text-[10px] font-bold uppercase tracking-widest text-[#800000] hover:underline">Contact PI</a>
+                                    <div class="pb-6 border-b border-gray-200">
+                                        <span class="inline-block px-2 py-1 bg-black text-white text-[10px] font-bold uppercase tracking-wider mb-2 rounded-sm">Opening</span>
+                                        <h4 class="font-bold text-base text-gray-900">PhD & Postdoc Positions</h4>
+                                        <p class="text-sm text-gray-600 mt-2 mb-3 leading-relaxed">We are actively looking for highly motivated students and researchers interested in Quantum Error Correction, Reinforcement Learning, and Quantum Control.</p>
+                                        <a href="mailto:bijita.sarma@cmi.ac.in" class="text-xs font-bold uppercase tracking-widest text-[#800000] hover:text-black transition-colors flex items-center gap-1">Contact PI <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
                                     </div>
-                                    <div class="border-t border-gray-200 pt-4">
-                                        <span class="inline-block px-2 py-1 bg-gray-200 text-gray-700 text-[10px] font-bold uppercase tracking-wider mb-2">Event</span>
-                                        <h4 class="font-bold text-sm text-gray-900">ML for Quantum Tech</h4>
-                                        <p class="text-xs text-gray-600 mt-1 mb-2">Workshop organized in Nov 2024.</p>
-                                        <button onclick="switchTab('events')" class="text-[10px] font-bold uppercase tracking-widest text-[#800000] hover:underline">View Details</button>
+                                    <div>
+                                        <span class="inline-block px-2 py-1 bg-gray-200 text-gray-700 text-[10px] font-bold uppercase tracking-wider mb-2 rounded-sm">Event</span>
+                                        <h4 class="font-bold text-base text-gray-900">ML for Quantum Tech Workshop</h4>
+                                        <p class="text-sm text-gray-600 mt-2 mb-3 leading-relaxed">Thank you to everyone who participated in the 2nd Workshop organized at the Max Planck Institute.</p>
+                                        <button onclick="switchTab('events')" class="text-xs font-bold uppercase tracking-widest text-[#800000] hover:text-black transition-colors flex items-center gap-1">View Details <i data-lucide="arrow-right" class="w-3 h-3"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -235,36 +278,54 @@
             </div>
         </div>
 
-        <!-- ================= VIEW: RESEARCH (Merged with Publications) ================= -->
+        <!-- ================= VIEW: RESEARCH ================= -->
         <div id="view-research" class="view-section hidden-tab fade-in">
             <div class="max-w-7xl mx-auto px-6 py-16">
                 
                 <!-- Research Areas Header -->
                 <div class="mb-20">
                     <h2 class="serif text-4xl md:text-5xl font-bold text-gray-900 mb-12">Research Areas</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <div class="bg-gray-50 p-8 border-t-4 border-[#800000]">
-                            <h3 class="serif text-2xl font-bold mb-4 text-gray-900">Quantum Control</h3>
-                            <p class="text-gray-700 leading-relaxed font-light">
-                                We utilize deep reinforcement learning to discover optimal control pulses for open quantum systems. This includes stabilizing qubits against noise and preparing non-classical states in non-linear potentials.
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-gray-50 p-6 border-t-4 border-[#800000]">
+                            <h3 class="serif text-xl font-bold mb-3 text-gray-900">Quantum Error Correction</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed font-light">
+                                We utilize measurement-based feedback strategies and continuous-time protocols for Quantum Error Correction (QEC). We explore autonomous QEC schemes powered by RL-pulse shaping for robust fault-tolerant operations.
                             </p>
                         </div>
-                        <div class="bg-gray-50 p-8 border-t-4 border-gray-300">
-                            <h3 class="serif text-2xl font-bold mb-4 text-gray-900">Error Correction</h3>
-                            <p class="text-gray-700 leading-relaxed font-light">
-                                Our work focuses on measurement-based feedback strategies for Quantum Error Correction (QEC). We are exploring autonomous QEC schemes that can be implemented on near-term hardware.
+                        <div class="bg-gray-50 p-6 border-t-4 border-gray-300">
+                            <h3 class="serif text-xl font-bold mb-3 text-gray-900">Quantum Control & Gates</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed font-light">
+                                Designing fast and high-fidelity quantum gates for superconducting qubits using machine learning ansatz and deep reinforcement learning, targeting multilevel superconducting circuits.
                             </p>
                         </div>
-                        <div class="bg-gray-50 p-8 border-t-4 border-gray-300">
-                            <h3 class="serif text-2xl font-bold mb-4 text-gray-900">Optomechanics</h3>
-                            <p class="text-gray-700 leading-relaxed font-light">
-                                Investigating ground-state cooling and photon antibunching in cavity optomechanical systems. Tailoring light-matter interaction for quantum sensing.
+                        <div class="bg-gray-50 p-6 border-t-4 border-gray-300">
+                            <h3 class="serif text-xl font-bold mb-3 text-gray-900">Quantum Algorithms & QML</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed font-light">
+                                Variational optimization, quantum simulations, and the development of quantum machine learning architectures tailored directly to the capabilities of near-term hardware.
                             </p>
                         </div>
-                        <div class="bg-gray-50 p-8 border-t-4 border-gray-300">
-                            <h3 class="serif text-2xl font-bold mb-4 text-gray-900">Hardware Efficient Gates</h3>
-                            <p class="text-gray-700 leading-relaxed font-light">
-                                Designing fast and high-fidelity quantum gates for superconducting qubits using machine learning ansatz, targeting architectures for the Munich Quantum Valley.
+                        <div class="bg-gray-50 p-6 border-t-4 border-gray-300">
+                            <h3 class="serif text-xl font-bold mb-3 text-gray-900">Quantum Sensing & Metrology</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed font-light">
+                                Quantum-enhanced sensing protocols and precision metrology utilizing continuous observation, along with hybrid opto–magno–mechanical and cavity-QED platforms.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-6 border-t-4 border-gray-300">
+                            <h3 class="serif text-xl font-bold mb-3 text-gray-900">Superconducting Circuits</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed font-light">
+                                Design and advanced control of multiqubit superconducting architectures, incorporating tunable couplers and fluxonium/transmon devices for scalable processors.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-6 border-t-4 border-gray-300">
+                            <h3 class="serif text-xl font-bold mb-3 text-gray-900">Quantum Optics & Optomechanics</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed font-light">
+                                Investigating nonclassical light and mechanics, exploring ground-state cooling, photon antibunching, and blockade phenomena in cavity optomechanical systems.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-6 border-t-4 border-gray-300">
+                            <h3 class="serif text-xl font-bold mb-3 text-gray-900">Magnonics & Cavity QED</h3>
+                            <p class="text-sm text-gray-700 leading-relaxed font-light">
+                                Studying hybrid magnon–photon–phonon systems to push boundaries in quantum information processing, sensing, and cavity-QED-inspired quantum technologies.
                             </p>
                         </div>
                     </div>
@@ -274,58 +335,15 @@
                 <div class="mb-20">
                     <h2 class="serif text-4xl md:text-5xl font-bold text-gray-900 mb-12 pb-6 border-b border-gray-200">Publications</h2>
                     
-                    <!-- Highlighted Papers -->
-                    <h3 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-8">Selected Highlights</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                        <div class="border border-gray-100 p-6 hover:shadow-lg transition-shadow bg-white">
-                            <span class="text-xs font-bold text-[#800000] uppercase tracking-widest">Phys. Rev. Lett. (2025)</span>
-                            <h4 class="serif text-xl font-bold mt-3 mb-3 leading-snug">Non-Markovian feedback for optimized quantum error correction</h4>
-                            <p class="text-sm text-gray-600 mb-4 font-light">Matteo Puviani, Sangkha Borah, Remmy Zen, Jan Olle, Florian Marquardt</p>
-                            <a href="#" class="text-xs font-bold uppercase underline decoration-1 hover:text-[#800000]">Read Paper</a>
-                        </div>
-                        <div class="border border-gray-100 p-6 hover:shadow-lg transition-shadow bg-white">
-                            <span class="text-xs font-bold text-[#800000] uppercase tracking-widest">Phys. Rev. Lett. (2023)</span>
-                            <h4 class="serif text-xl font-bold mt-3 mb-3 leading-snug">No-Collapse Accurate Quantum Feedback Control</h4>
-                            <p class="text-sm text-gray-600 mb-4 font-light">Sangkha Borah, <b>Bijita Sarma</b></p>
-                            <a href="#" class="text-xs font-bold uppercase underline decoration-1 hover:text-[#800000]">Read Paper</a>
-                        </div>
-                        <div class="border border-gray-100 p-6 hover:shadow-lg transition-shadow bg-white">
-                            <span class="text-xs font-bold text-[#800000] uppercase tracking-widest">Phys. Rev. Res. (2022)</span>
-                            <h4 class="serif text-xl font-bold mt-3 mb-3 leading-snug">Accelerated motional cooling with deep RL</h4>
-                            <p class="text-sm text-gray-600 mb-4 font-light"><b>Bijita Sarma</b>, Sangkha Borah, A Kani, Jason Twamley</p>
-                            <a href="#" class="text-xs font-bold uppercase underline decoration-1 hover:text-[#800000]">Read Paper</a>
-                        </div>
+                    <!-- Highlighted Papers JS Injected -->
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-[#800000] mb-8">Selected Highlights</h3>
+                    <div id="highlighted-pub-list" class="space-y-4 mb-16">
+                        <!-- JS Injected -->
                     </div>
 
-                    <!-- Preprints -->
-                    <h3 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6">Preprints</h3>
-                    <div class="space-y-6 mb-16 pl-4 border-l-2 border-gray-100">
-                        <div class="flex gap-4 items-baseline">
-                            <span class="text-sm font-bold text-gray-400 w-12">2025</span>
-                            <div>
-                                <h4 class="serif text-lg font-bold text-gray-900">Scalable Fluxonium-Transmon Architecture for Error Corrected Quantum Processors</h4>
-                                <p class="text-sm text-gray-600 font-light">Lukas Heunisch... <b>Bijita Sarma</b>... Michael J Hartmann. <i>arXiv: 2508.09267</i></p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4 items-baseline">
-                            <span class="text-sm font-bold text-gray-400 w-12">2024</span>
-                            <div>
-                                <h4 class="serif text-lg font-bold text-gray-900">Precision Quantum Parameter Inference with Continuous Observation</h4>
-                                <p class="text-sm text-gray-600 font-light"><b>Bijita Sarma</b>, Junxin Chen, Sangkha Borah. <i>arXiv: 2407.12650</i></p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4 items-baseline">
-                            <span class="text-sm font-bold text-gray-400 w-12">2023</span>
-                            <div>
-                                <h4 class="serif text-lg font-bold text-gray-900">Zeptometer displacement sensing using cavity opto-magneto-mechanics</h4>
-                                <p class="text-sm text-gray-600 font-light">Tatiana Iakovleva, <b>Bijita Sarma</b>, Jason Twamley. <i>arXiv: 2302.06795</i></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Journal Papers List -->
+                    <!-- Journal Papers List JS Injected -->
                     <h3 class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6">Full List of Publications</h3>
-                    <div id="full-pub-list" class="space-y-6">
+                    <div id="full-pub-list" class="space-y-4">
                         <!-- JS Injected -->
                     </div>
                 </div>
@@ -365,13 +383,12 @@
             </div>
         </div>
 
-        <!-- ================= VIEW: EVENTS (New Page) ================= -->
+        <!-- ================= VIEW: EVENTS ================= -->
         <div id="view-events" class="view-section hidden-tab fade-in">
             <div class="max-w-5xl mx-auto px-6 py-16">
                 <h2 class="serif text-4xl font-bold text-gray-900 mb-12">Events & Organization</h2>
                 
                 <div class="space-y-12">
-                    <!-- Event 1 -->
                     <div class="flex flex-col md:flex-row gap-8 border-b border-gray-100 pb-12">
                         <div class="md:w-1/4">
                             <span class="block text-3xl serif font-bold text-gray-300">2024</span>
@@ -385,7 +402,6 @@
                             </p>
                         </div>
                     </div>
-                    <!-- Event 2 -->
                     <div class="flex flex-col md:flex-row gap-8 border-b border-gray-100 pb-12">
                         <div class="md:w-1/4">
                             <span class="block text-3xl serif font-bold text-gray-300">2024</span>
@@ -399,7 +415,6 @@
                             </p>
                         </div>
                     </div>
-                    <!-- Event 3 -->
                     <div class="flex flex-col md:flex-row gap-8 border-b border-gray-100 pb-12">
                         <div class="md:w-1/4">
                             <span class="block text-3xl serif font-bold text-gray-300">2023-24</span>
@@ -413,7 +428,6 @@
                             </p>
                         </div>
                     </div>
-                    <!-- Event 4 -->
                     <div class="flex flex-col md:flex-row gap-8 border-b border-gray-100 pb-12">
                         <div class="md:w-1/4">
                             <span class="block text-3xl serif font-bold text-gray-300">2015-16</span>
@@ -437,7 +451,7 @@
                 <!-- Profile Header -->
                 <div class="flex flex-col md:flex-row gap-12 items-start mb-16">
                     <div class="w-full md:w-1/3">
-                        <img src="https://api.dicebear.com/7.x/initials/svg?seed=BS&backgroundColor=800000" class="w-full aspect-[3/4] object-cover bg-gray-100 grayscale hover:grayscale-0 transition-all duration-500 shadow-lg rounded-sm">
+                        <img src="assets/group_members/pi/bs01.jpeg" onerror="this.src='https://api.dicebear.com/7.x/initials/svg?seed=BS&backgroundColor=800000'" class="w-full aspect-[3/4] object-cover bg-gray-100 grayscale hover:grayscale-0 transition-all duration-500 shadow-lg rounded-sm">
                     </div>
                     <div class="w-full md:w-2/3">
                         <h2 class="serif text-4xl md:text-5xl font-bold text-gray-900 mb-2">Bijita Sarma</h2>
@@ -450,13 +464,16 @@
                                 Prior to CMI, she was a Postdoctoral Researcher at Friedrich-Alexander-Universität Erlangen-Nürnberg (Munich Quantum Valley) and the Okinawa Institute of Science and Technology (OIST).
                             </p>
                         </div>
-                        <div class="flex flex-col gap-4">
-                            <a href="mailto:bijita@cmi.ac.in" class="flex items-center gap-2 font-bold hover:text-[#800000]"><i data-lucide="mail" class="w-4 h-4"></i> bijita@cmi.ac.in</a>
-                            <a href="https://scholar.google.com/citations?user=qfByhykAAAAJ&hl=en" target="_blank" class="flex items-center gap-2 font-bold hover:text-[#800000]"><i data-lucide="graduation-cap" class="w-4 h-4"></i> Google Scholar</a>
-                            <div class="flex gap-4 mt-2">
-                                <a href="#" class="text-gray-400 hover:text-[#0077b5] transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-                                <a href="#" class="text-gray-400 hover:text-black transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
-                                <a href="#" class="text-gray-400 hover:text-black transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                        
+                        <!-- Contact & Social Links Update -->
+                        <div class="flex flex-col gap-4 bg-gray-50 p-6 rounded-md border border-gray-100">
+                            <a href="mailto:bijita.sarma@cmi.ac.in" class="flex items-center gap-3 font-bold text-gray-700 hover:text-[#800000] transition-colors"><i data-lucide="mail" class="w-5 h-5 text-[#800000]"></i> bijita.sarma@cmi.ac.in</a>
+                            
+                            <div class="flex flex-wrap gap-x-8 gap-y-4 mt-2">
+                                <a href="https://scholar.google.co.in/citations?hl=en&user=1pE-QQMAAAAJ" target="_blank" class="flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-[#4285F4] transition-colors"><i data-lucide="graduation-cap" class="w-5 h-5"></i> Google Scholar</a>
+                                <a href="https://de.linkedin.com/in/bijita-sarma-95826b69" target="_blank" class="flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-[#0077b5] transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn</a>
+                                <a href="https://github.com/bijitasarma" target="_blank" class="flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-black transition-colors"><i data-lucide="github" class="w-5 h-5"></i> GitHub</a>
+                                <a href="#" target="_blank" class="flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-[#1DA1F2] transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i> Twitter</a>
                             </div>
                         </div>
                     </div>
@@ -464,6 +481,23 @@
 
                 <!-- CV Sections -->
                 <div class="space-y-16">
+
+                    <!-- Grants & Funding -->
+                    <section>
+                        <h3 class="serif text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">Grants & Funding</h3>
+                        <div class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                <div class="text-sm font-bold text-gray-400 uppercase">Current</div>
+                                <div class="md:col-span-3">
+                                    <h4 class="font-bold text-lg text-gray-900">Institutional Start-up Grant</h4>
+                                    <p class="text-gray-700 font-light">Chennai Mathematical Institute</p>
+                                    <p class="text-sm text-gray-500 italic mt-1">Role: Principal Investigator. Supporting the establishment of the QCQT research group.</p>
+                                </div>
+                            </div>
+                            <!-- Add more grants here as they are acquired -->
+                        </div>
+                    </section>
+
                     <!-- Experience -->
                     <section>
                         <h3 class="serif text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">Professional Experience</h3>
@@ -546,7 +580,7 @@
                             </div>
                         </div>
                     </section>
-
+                    
                     <!-- Awards -->
                     <section>
                         <h3 class="serif text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">Awards & Achievements</h3>
@@ -563,53 +597,91 @@
 
                     <!-- Talks & Presentations -->
                     <section>
-                        <h3 class="serif text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">Invited Talks & Presentations</h3>
-                        <div class="space-y-4">
+                        <h3 class="serif text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">Talks & Presentations (Conferences / Seminars)</h3>
+                        <div class="space-y-5">
                             <div class="flex gap-4 items-baseline text-sm">
-                                <span class="font-bold text-gray-400 w-24 shrink-0">Nov 2024</span>
-                                <div>
-                                    <p class="font-bold text-gray-900">Designing Fast Quantum Gates using Optimal Control with RL Ansatz</p>
-                                    <p class="text-gray-600 italic">2nd Workshop on Machine Learning for Quantum Technology, MPI Science of Light, Germany.</p>
-                                </div>
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Nov. 2024</span>
+                                <div><p class="font-bold text-gray-900">Designing Fast Quantum Gates using Optimal Control with Reinforcement Learning Ansatz</p><p class="text-gray-600 italic">2nd Workshop on Machine Learning for Quantum Technology, Max Planck Institute for the Science of Light, Germany</p></div>
                             </div>
                             <div class="flex gap-4 items-baseline text-sm">
-                                <span class="font-bold text-gray-400 w-24 shrink-0">Mar 2024</span>
-                                <div>
-                                    <p class="font-bold text-gray-900">Quantum gate design with machine learning</p>
-                                    <p class="text-gray-600 italic">DPG Spring Meeting, Berlin; APS March Meeting, Minneapolis.</p>
-                                </div>
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Mar. 2024</span>
+                                <div><p class="font-bold text-gray-900">Quantum gate design with machine learning</p><p class="text-gray-600 italic">DPG Spring Meeting 2024, Berlin, Germany</p></div>
                             </div>
                             <div class="flex gap-4 items-baseline text-sm">
-                                <span class="font-bold text-gray-400 w-24 shrink-0">Sep 2023</span>
-                                <div>
-                                    <p class="font-bold text-gray-900">Fast quantum gate design with reinforcement learning</p>
-                                    <p class="text-gray-600 italic">MQV review meeting, Eichstätt, Germany.</p>
-                                </div>
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Mar. 2024</span>
+                                <div><p class="font-bold text-gray-900">Quantum gate design with machine learning</p><p class="text-gray-600 italic">American Physical Society March Meeting 2024, Minneapolis, USA</p></div>
                             </div>
                             <div class="flex gap-4 items-baseline text-sm">
-                                <span class="font-bold text-gray-400 w-24 shrink-0">Nov 2022</span>
-                                <div>
-                                    <p class="font-bold text-gray-900">Measurement-based feedback control with reinforcement learning</p>
-                                    <p class="text-gray-600 italic">Invited Talk, Max Planck Institute for the Science of Light, Germany.</p>
-                                </div>
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Sep. 2023</span>
+                                <div><p class="font-bold text-gray-900">Fast quantum gate design with reinforcement learning</p><p class="text-gray-600 italic">MQV review meeting 2023, Altes Stadttheater Eichstätt, Germany</p></div>
                             </div>
                             <div class="flex gap-4 items-baseline text-sm">
-                                <span class="font-bold text-gray-400 w-24 shrink-0">July 2022</span>
-                                <div>
-                                    <p class="font-bold text-gray-900">Deep RL for measurement-based feedback quantum control</p>
-                                    <p class="text-gray-600 italic">Invited Talk, IQOQI and University of Innsbruck, Austria.</p>
-                                </div>
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Aug. 2023</span>
+                                <div><p class="font-bold text-gray-900">Design and Modeling of High-fidelity Two-qubit Fluxonium Gates with Tunable Coupler</p><p class="text-gray-600 italic">Superconducting Qubits and Algorithms Conference, Munich, Germany</p></div>
                             </div>
                             <div class="flex gap-4 items-baseline text-sm">
-                                <span class="font-bold text-gray-400 w-24 shrink-0">Feb 2018</span>
-                                <div>
-                                    <p class="font-bold text-gray-900">Phonon blockade in weakly nonlinear mechanical resonators</p>
-                                    <p class="text-gray-600 italic">Invited Talk, National Science Day, IIT Guwahati.</p>
-                                </div>
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Aug. 2023</span>
+                                <div><p class="font-bold text-gray-900">Fast quantum gate design with reinforcement learning</p><p class="text-gray-600 italic">FAU Quantum Theory Summer Symposium 2023, FAU, Germany</p></div>
+                            </div>
+                            <div class="flex gap-4 items-baseline text-sm">
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Jun. 2023</span>
+                                <div><p class="font-bold text-gray-900">Fast quantum gate design with reinforcement learning</p><p class="text-gray-600 italic">MQV K8 Consortia internal meeting, MPI Quantum Optics, Garching, Germany</p></div>
+                            </div>
+                            <div class="flex gap-4 items-baseline text-sm">
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Feb. 2023</span>
+                                <div><p class="font-bold text-gray-900">Quantum Machine Learning - Integrating Hardware and Software Developments</p><p class="text-gray-600 italic">FAU and Max Planck Institute for Science of Light, Germany</p></div>
+                            </div>
+                            <div class="flex gap-4 items-baseline text-sm">
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Nov. 2022</span>
+                                <div><p class="font-bold text-gray-900">Measurement-based feedback control with reinforcement learning (Invited Talk)</p><p class="text-gray-600 italic">Max Planck Institute for the Science of Light, Germany</p></div>
+                            </div>
+                            <div class="flex gap-4 items-baseline text-sm">
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Jul. 2022</span>
+                                <div><p class="font-bold text-gray-900">Deep reinforcement learning for measurement-based feedback quantum control and machine-optimized pulsed cooling (Invited Talk)</p><p class="text-gray-600 italic">IQOQI and University of Innsbruck, Austria</p></div>
+                            </div>
+                            <div class="flex gap-4 items-baseline text-sm">
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Apr. 2018</span>
+                                <div><p class="font-bold text-gray-900">C3QS: Coherent Control of Complex Quantum Systems</p><p class="text-gray-600 italic">OIST Graduate University, Okinawa, Japan</p></div>
+                            </div>
+                            <div class="flex gap-4 items-baseline text-sm">
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Mar. 2018</span>
+                                <div><p class="font-bold text-gray-900">Optomechanical ground-state cooling in the unresolved sideband regime (Poster)</p><p class="text-gray-600 italic">Recent Trends in Cold and Ultracold Matter, IIT Guwahati, India</p></div>
+                            </div>
+                            <div class="flex gap-4 items-baseline text-sm">
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Feb. 2018</span>
+                                <div><p class="font-bold text-gray-900">Phonon blockade in weakly nonlinear mechanical resonators in an optomechanical cavity (Invited Talk)</p><p class="text-gray-600 italic">National Science Day, IIT Guwahati, India</p></div>
+                            </div>
+                            <div class="flex gap-4 items-baseline text-sm">
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Jul. 2017</span>
+                                <div><p class="font-bold text-gray-900">Ground-state cooling in cavity optomechanics (Poster)</p><p class="text-gray-600 italic">ICTS school on Open Quantum Systems, ICTS Bangalore, India</p></div>
+                            </div>
+                            <div class="flex gap-4 items-baseline text-sm">
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Dec. 2016</span>
+                                <div><p class="font-bold text-gray-900">Strong antibunching in a Kerr-type optomechanical cavity (Poster)</p><p class="text-gray-600 italic">PHOTONICS 2016, IIT Kanpur, India</p></div>
+                            </div>
+                            <div class="flex gap-4 items-baseline text-sm">
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Nov. 2016</span>
+                                <div><p class="font-bold text-gray-900">Photon blockade in optomechanical systems (Oral)</p><p class="text-gray-600 italic">International Conference on Light and Light-based Technologies (ICLLT-2016), Tezpur University, India</p></div>
+                            </div>
+                            <div class="flex gap-4 items-baseline text-sm">
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Mar. 2016</span>
+                                <div><p class="font-bold text-gray-900">Sideband cooling of micromechanical resonators in cavity optomechanics (Poster)</p><p class="text-gray-600 italic">Research Conclave, IIT Guwahati, India</p></div>
+                            </div>
+                            <div class="flex gap-4 items-baseline text-sm">
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Dec. 2015</span>
+                                <div><p class="font-bold text-gray-900">Atom assisted cavity cooling of a micromechanical oscillator in the unresolved sideband regime (Poster)</p><p class="text-gray-600 italic">XXVII IUPAP Conference on Computational Physics (CCP-2015), IIT Guwahati, India</p></div>
+                            </div>
+                            <div class="flex gap-4 items-baseline text-sm">
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Nov. 2015</span>
+                                <div><p class="font-bold text-gray-900">South Asian Workshop on Optics & Photonics, 'SAWOP-2015'</p><p class="text-gray-600 italic">IIT Guwahati, India</p></div>
+                            </div>
+                            <div class="flex gap-4 items-baseline text-sm">
+                                <span class="font-bold text-gray-400 w-24 shrink-0">Oct. 2015</span>
+                                <div><p class="font-bold text-gray-900">Quantum Optics with Cavity Optomechanical Systems (Poster)</p><p class="text-gray-600 italic">TEQIP symposium on International Year of Light, IIT Guwahati, India</p></div>
                             </div>
                         </div>
                     </section>
-
+                    
                     <!-- Service -->
                     <section>
                         <h3 class="serif text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">Service & Memberships</h3>
@@ -619,6 +691,7 @@
                             <p><strong>Memberships:</strong> American Physical Society, Physics Academy of the North East (PANE), SPIE Student Chapter (Former Outreach Coordinator).</p>
                         </div>
                     </section>
+
                 </div>
             </div>
         </div>
@@ -730,38 +803,359 @@
             if(activeBtn) activeBtn.classList.add('active');
         }
 
-        const journalPublications = [
-            { title: "Designing Fast Quantum Gates using Optimal Control with a Reinforcement Learning Ansatz", journal: "Phys. Rev. Appl. 23, 014015", year: "2025" },
-            { title: "No-Collapse Accurate Quantum Feedback Control via Conditional State Tomography", journal: "Phys. Rev. Lett. 131, 210803", year: "2023" },
-            { title: "Accelerated motional cooling with deep reinforcement learning", journal: "Phys. Rev. Res. 4, L042038", year: "2022" },
-            { title: "Measurement based estimator scheme for continuous quantum error correction", journal: "Phys. Rev. Res. 4, 033207", year: "2022" },
-            { title: "Intensive cavity-magnomechanical cooling of a levitated macromagnet", journal: "Phys. Rev. Lett. 128, 013602", year: "2022" },
-            { title: "Measurement-Based Feedback Quantum Control with Deep Reinforcement Learning", journal: "Phys. Rev. Lett. 127, 190403", year: "2021" },
-            { title: "Cavity magnomechanical storage and retrieval of quantum states", journal: "New J. Phys. 23, 043041", year: "2021" },
-            { title: "Optomechanical cooling by STIRAP-assisted energy transfer", journal: "New J. Phys. 22, 103043", year: "2020" },
-            { title: "Tunable phonon blockade in weakly nonlinear coupled mechanical resonators", journal: "Sci. Rep. 8, 14583", year: "2018" },
-            { title: "Unconventional photon blockade in three-mode optomechanics", journal: "Phys. Rev. A 98, 013826", year: "2018" },
-            { title: "Single-photon blockade in a hybrid cavity-optomechanical system via third-order nonlinearity", journal: "J. Phys. B 51, 075505", year: "2018" },
-            { title: "Quantum-interference-assisted photon blockade in a cavity via parametric interactions", journal: "Phys. Rev. A 96, 053827", year: "2017" },
-            { title: "Controllable optical bistability in a hybrid optomechanical system", journal: "J. Opt. Soc. Am. B 33, 1335", year: "2016" },
-            { title: "Ground-state cooling of micromechanical oscillators in the unresolved sideband regime induced by a quantum well", journal: "Phys. Rev. A 93, 033845", year: "2016" }
+        const publicationsData = [
+            {
+                title: "Scalable Fluxonium-Transmon Architecture for Error Corrected Quantum Processors",
+                authors: "Lukas Heunisch, ..., <u>Bijita Sarma</u>, ..., Michael J Hartmann",
+                journal: "arXiv preprint",
+                volume: "arXiv:2508.09267",
+                year: "2025",
+                doi: "",
+                link: "https://arxiv.org/abs/2508.09267",
+                arxiv: "https://arxiv.org/abs/2508.09267",
+                abstract: "Preprint detailing a scalable architecture combining fluxonium and transmon qubits for robust error correction in near-term processors.",
+                highlight: false,
+                media: null,
+                impact: null
+            },
+            {
+                title: "Precision Quantum Parameter Inference with Continuous Observation",
+                authors: "<u>Bijita Sarma</u>, Junxin Chen, Sangkha Borah",
+                journal: "arXiv preprint",
+                volume: "arXiv:2407.12650",
+                year: "2024",
+                doi: "",
+                link: "https://arxiv.org/abs/2407.12650",
+                arxiv: "https://arxiv.org/abs/2407.12650",
+                abstract: "We investigate precision quantum metrology techniques leveraging continuous measurement records for enhanced parameter estimation.",
+                highlight: false,
+                media: null,
+                impact: null
+            },
+            {
+                title: "Zeptometer displacement sensing using cavity opto-magneto-mechanics",
+                authors: "Tatiana Iakovleva, <u>Bijita Sarma</u>, Jason Twamley",
+                journal: "arXiv preprint",
+                volume: "arXiv:2302.06795",
+                year: "2023",
+                doi: "",
+                link: "https://arxiv.org/abs/2302.06795",
+                arxiv: "https://arxiv.org/abs/2302.06795",
+                abstract: "A novel opto-magneto-mechanical setup is proposed to achieve zeptometer-level sensitivity in displacement sensing.",
+                highlight: false,
+                media: null,
+                impact: null
+            },
+            {
+                title: "Non-Markovian feedback for optimized quantum error correction",
+                authors: "Matteo Puviani, Sangkha Borah, Remmy Zen, Jan Olle, Florian Marquardt",
+                journal: "Phys. Rev. Lett.",
+                volume: "(Accepted/Published)",
+                year: "2025",
+                doi: "",
+                link: "",
+                arxiv: "",
+                abstract: "We explore non-Markovian feedback protocols aimed at drastically optimizing quantum error correction cycles on contemporary superconducting architectures.",
+                highlight: true,
+                image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=800&auto=format&fit=crop",
+                short_desc: "A novel non-Markovian feedback protocol that drastically optimizes quantum error correction cycles on contemporary superconducting architectures.",
+                media: null,
+                impact: null
+            },
+            {
+                title: "Designing Fast Quantum Gates using Optimal Control with a Reinforcement Learning Ansatz",
+                authors: "<u>Bijita Sarma*</u> and Michael J. Hartmann",
+                journal: "Phys. Rev. Appl.",
+                volume: "23, 014015",
+                year: "2025",
+                doi: "https://doi.org/10.1103/PhysRevApplied.23.014015",
+                link: "https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.23.014015",
+                arxiv: "",
+                abstract: "In this work, we propose a reinforcement learning (RL) based approach for designing fast and high-fidelity quantum gates. By leveraging optimal control theory alongside a deep RL ansatz, we demonstrate robust gate generation suitable for near-term quantum processors.",
+                highlight: true,
+                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
+                short_desc: "Demonstrating robust gate generation suitable for near-term quantum processors by leveraging optimal control theory alongside a deep RL ansatz.",
+                media: null,
+                impact: null
+            },
+            {
+                title: "No-Collapse Accurate Quantum Feedback Control via Conditional State Tomography",
+                authors: "Sangkha Borah, <u>Bijita Sarma*</u>",
+                journal: "Phys. Rev. Lett.",
+                volume: "131, 210803",
+                year: "2023",
+                doi: "https://doi.org/10.1103/PhysRevLett.131.210803",
+                link: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.210803",
+                arxiv: "",
+                abstract: "We present a scheme for precise quantum feedback control avoiding projective wavefunction collapse. By applying conditional state tomography on the continuous measurement record, accurate state preparation and stabilization are achieved.",
+                highlight: true,
+                image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop",
+                short_desc: "Achieving accurate state preparation and stabilization via precise quantum feedback control, successfully avoiding projective wavefunction collapse.",
+                media: null,
+                impact: null
+            },
+            {
+                title: "Accelerated motional cooling with deep reinforcement learning",
+                authors: "<u>Bijita Sarma*</u>, Sangkha Borah, A Kani, Jason Twamley",
+                journal: "Phys. Rev. Res. (Letter)",
+                volume: "4, L042038",
+                year: "2022",
+                doi: "https://doi.org/10.1103/PhysRevResearch.4.L042038",
+                link: "https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.L042038",
+                arxiv: "",
+                abstract: "We utilize deep reinforcement learning to formulate optimized pulsing sequences for the accelerated ground-state cooling of mechanical oscillators, surpassing traditional continuous-wave schemes.",
+                highlight: true,
+                image: "https://images.unsplash.com/photo-1544335503-b0972412b1d3?q=80&w=800&auto=format&fit=crop",
+                short_desc: "Utilizing deep reinforcement learning to formulate optimized pulsing sequences for the accelerated ground-state cooling of mechanical oscillators.",
+                media: { text: "Pulses driven by artificial intelligence tame quantum systems", publisher: "Phys.org", link: "https://phys.org/news/2022-11-pulses-driven-artificial-intelligence-quantum.html" },
+                impact: null
+            },
+            {
+                title: "Measurement based estimator scheme for continuous quantum error correction",
+                authors: "Sangkha Borah, <u>Bijita Sarma</u>, Michael Kewming, Fernando Quijandria, Gerard J Milburn, Jason Twamley",
+                journal: "Phys. Rev. Res.",
+                volume: "4, 033207",
+                year: "2022",
+                doi: "https://doi.org/10.1103/PhysRevResearch.4.033207",
+                link: "https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.033207",
+                arxiv: "",
+                abstract: "A novel estimator scheme using continuous measurements for quantum error correction. The approach provides real-time error tracking and correction applied back to the system via feedback.",
+                highlight: true,
+                image: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=800&auto=format&fit=crop",
+                short_desc: "Providing real-time error tracking and correction applied back to the system via feedback using a novel continuous measurement estimator.",
+                media: { text: "MBE-CQEC: A new scheme to correct quantum errors", publisher: "Phys.org", link: "https://phys.org/news/2022-09-mbe-cqec-scheme-quantum-errors.html" },
+                impact: "3.5"
+            },
+            {
+                title: "Intensive cavity-magnomechanical cooling of a levitated macromagnet",
+                authors: "A Kani, <u>Bijita Sarma</u>, Jason Twamley",
+                journal: "Phys. Rev. Lett.",
+                volume: "128, 013602",
+                year: "2022",
+                doi: "https://doi.org/10.1103/PhysRevLett.128.013602",
+                link: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.128.013602",
+                arxiv: "",
+                abstract: "We propose a scheme to actively cool the center-of-mass motion of a levitated macroscopic magnet using cavity magnomechanics, paving the way for macroscopic quantum states.",
+                highlight: true,
+                media: null,
+                impact: "8.1"
+            },
+            {
+                title: "Measurement-Based Feedback Quantum Control with Deep Reinforcement Learning for a Double-Well Nonlinear Potential",
+                authors: "Sangkha Borah, <u>Bijita Sarma</u>, Michael Kewming, Gerard J. Milburn, Jason Twamley",
+                journal: "Phys. Rev. Lett.",
+                volume: "127, 190403",
+                year: "2021",
+                doi: "https://doi.org/10.1103/PhysRevLett.127.190403",
+                link: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.127.190403",
+                arxiv: "",
+                abstract: "Deep reinforcement learning is applied to design measurement-based feedback strategies, successfully driving and stabilizing nonclassical states in highly nonlinear double-well potentials.",
+                highlight: true,
+                media: { text: "Machine learning - a useful tool for quantum control", publisher: "Phys.org", link: "https://phys.org/news/2021-11-machine-tool-quantum.html" },
+                impact: "8.1"
+            },
+            {
+                title: "Cavity magnomechanical storage and retrieval of quantum states",
+                authors: "<u>Bijita Sarma</u>, et al.",
+                journal: "New J. Phys.",
+                volume: "23, 043041",
+                year: "2021",
+                doi: "https://doi.org/10.1088/1367-2630/abf0b0",
+                link: "https://iopscience.iop.org/article/10.1088/1367-2630/abf0b0",
+                arxiv: "",
+                abstract: "We investigate the storage and retrieval of microwave fields into the mechanical mode of a cavity magnomechanical system.",
+                highlight: false, media: null, impact: null
+            },
+            {
+                title: "Optomechanical cooling by STIRAP-assisted energy transfer",
+                authors: "<u>Bijita Sarma</u>, et al.",
+                journal: "New J. Phys.",
+                volume: "22, 103043",
+                year: "2020",
+                doi: "https://doi.org/10.1088/1367-2630/abbf26",
+                link: "https://iopscience.iop.org/article/10.1088/1367-2630/abbf26",
+                arxiv: "",
+                abstract: "A novel technique inspired by Stimulated Raman Adiabatic Passage (STIRAP) is introduced to deterministically extract phonons from a mechanical resonator.",
+                highlight: false, media: null, impact: null
+            },
+            {
+                title: "Tunable phonon blockade in weakly nonlinear coupled mechanical resonators",
+                authors: "<u>Bijita Sarma</u>, et al.",
+                journal: "Sci. Rep.",
+                volume: "8, 14583",
+                year: "2018",
+                doi: "https://doi.org/10.1038/s41598-018-32924-4",
+                link: "https://www.nature.com/articles/s41598-018-32924-4",
+                arxiv: "",
+                abstract: "Demonstration of tunable phonon blockade resulting from destructive interference of multiphonon transition paths in weakly nonlinear coupled resonators.",
+                highlight: false, media: null, impact: null
+            },
+            {
+                title: "Unconventional photon blockade in three-mode optomechanics",
+                authors: "<u>Bijita Sarma</u>, et al.",
+                journal: "Phys. Rev. A",
+                volume: "98, 013826",
+                year: "2018",
+                doi: "https://doi.org/10.1103/PhysRevA.98.013826",
+                link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.013826",
+                arxiv: "",
+                abstract: "Exploring unconventional photon blockade mechanisms in complex optomechanical geometries.",
+                highlight: false, media: null, impact: null
+            },
+            {
+                title: "Single-photon blockade in a hybrid cavity-optomechanical system via third-order nonlinearity",
+                authors: "<u>Bijita Sarma</u>, et al.",
+                journal: "J. Phys. B",
+                volume: "51, 075505",
+                year: "2018",
+                doi: "https://doi.org/10.1088/1361-6455/aaafbb",
+                link: "https://iopscience.iop.org/article/10.1088/1361-6455/aaafbb",
+                arxiv: "",
+                abstract: "Analysis of photon antibunching utilizing intrinsic third-order nonlinearities.",
+                highlight: false, media: null, impact: null
+            },
+            {
+                title: "Quantum-interference-assisted photon blockade in a cavity via parametric interactions",
+                authors: "<u>Bijita Sarma</u>, et al.",
+                journal: "Phys. Rev. A",
+                volume: "96, 053827",
+                year: "2017",
+                doi: "https://doi.org/10.1103/PhysRevA.96.053827",
+                link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.96.053827",
+                arxiv: "",
+                abstract: "Strong photon blockade generated through parametric interactions and resulting quantum interference paths.",
+                highlight: false, media: null, impact: null
+            },
+            {
+                title: "Controllable optical bistability in a hybrid optomechanical system",
+                authors: "<u>Bijita Sarma</u>, et al.",
+                journal: "J. Opt. Soc. Am. B",
+                volume: "33, 1335",
+                year: "2016",
+                doi: "https://doi.org/10.1364/JOSAB.33.001335",
+                link: "https://opg.optica.org/josab/abstract.cfm?uri=josab-33-7-1335",
+                arxiv: "",
+                abstract: "Control of bistability thresholds in hybrid setups.",
+                highlight: false, media: null, impact: null
+            },
+            {
+                title: "Ground-state cooling of micromechanical oscillators in the unresolved sideband regime induced by a quantum well",
+                authors: "<u>Bijita Sarma</u>, et al.",
+                journal: "Phys. Rev. A",
+                volume: "93, 033845",
+                year: "2016",
+                doi: "https://doi.org/10.1103/PhysRevA.93.033845",
+                link: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.93.033845",
+                arxiv: "",
+                abstract: "Ground state cooling scheme circumventing the stringent resolved sideband limit using auxiliary quantum well interactions.",
+                highlight: false, media: null, impact: null
+            }
         ];
 
-        const pubList = document.getElementById('full-pub-list');
-        journalPublications.forEach(pub => {
-            const div = document.createElement('div');
-            div.className = "flex gap-4 items-baseline group";
+        // Renders standard accordion publication row
+        function createPubElement(pub) {
+            const div = document.createElement('details');
+            div.className = "group border border-gray-200 bg-white rounded-md mb-4 shadow-sm open:shadow-md transition-shadow duration-200";
+            
+            const mediaHTML = pub.media ? `
+                <div class="mt-4 p-3 bg-gray-50 border-l-2 border-[#800000] text-sm">
+                    <strong>Media release:</strong> <i>${pub.media.publisher}</i>: <a href="${pub.media.link}" target="_blank" class="text-[#800000] hover:underline">"${pub.media.text}" <i data-lucide="external-link" class="w-3 h-3 inline"></i></a>
+                </div>
+            ` : '';
+
+            const impactHTML = pub.impact ? `<span class="ml-2 inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-gray-100 text-gray-800 border border-gray-200">IF: ${pub.impact}</span>` : '';
+
             div.innerHTML = `
-                <span class="text-sm font-bold text-gray-400 w-12 shrink-0">${pub.year}</span>
-                <div>
-                    <h4 class="serif text-lg font-bold hover:text-[#800000] cursor-pointer transition-colors text-gray-900 leading-snug mb-1">${pub.title}</h4>
-                    <p class="text-sm text-gray-600 font-light italic">${pub.journal}</p>
+                <summary class="flex justify-between items-start font-medium cursor-pointer list-none p-5 hover:bg-gray-50 transition-colors">
+                    <div class="pr-8">
+                        <span class="text-xs font-bold text-[#800000] uppercase tracking-widest block mb-2">${pub.year}</span>
+                        <h4 class="serif text-lg font-bold text-gray-900 leading-snug mb-1">${pub.title}</h4>
+                        <p class="text-sm text-gray-600 font-light mt-2">${pub.authors}</p>
+                        <p class="text-sm text-gray-800 font-medium mt-1">${pub.journal} <b>${pub.volume}</b> ${impactHTML}</p>
+                    </div>
+                    <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400 mt-1">
+                        <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                    </span>
+                </summary>
+                <div class="p-5 pt-0 text-sm text-gray-600 border-t border-gray-100 mt-2">
+                    <p class="leading-relaxed mt-4"><strong>Abstract:</strong> ${pub.abstract}</p>
+                    ${mediaHTML}
+                    <div class="mt-5 flex flex-wrap gap-4">
+                        ${pub.link && pub.journal !== 'arXiv preprint' ? `<a href="${pub.link}" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-white bg-[#800000] px-3 py-1.5 rounded-sm hover:bg-black transition-colors">Journal Link <i data-lucide="external-link" class="w-3 h-3"></i></a>` : ''}
+                        ${pub.doi ? `<a href="${pub.doi}" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-gray-600 border border-gray-200 px-3 py-1.5 rounded-sm hover:bg-gray-100 transition-colors">DOI: ${pub.doi.split('.org/')[1]}</a>` : ''}
+                        ${pub.arxiv ? `<a href="${pub.arxiv}" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-gray-600 border border-gray-200 px-3 py-1.5 rounded-sm hover:bg-gray-100 transition-colors">arXiv <i data-lucide="external-link" class="w-3 h-3"></i></a>` : ''}
+                    </div>
                 </div>
             `;
-            pubList.appendChild(div);
-        });
+            return div;
+        }
+
+        // Renders large picture cards for the Home page
+        function createFeaturedCard(pub) {
+            const div = document.createElement('div');
+            div.className = "flex flex-col md:flex-row gap-6 bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 group";
+            
+            const mediaHTML = pub.media ? `
+                <div class="mt-4 p-3 bg-gray-50 border-l-2 border-[#800000] text-sm">
+                    <strong>Media release:</strong> <i>${pub.media.publisher}</i>: <a href="${pub.media.link}" target="_blank" class="text-[#800000] hover:underline">"${pub.media.text}"</a>
+                </div>
+            ` : '';
+
+            div.innerHTML = `
+                <div class="md:w-5/12 shrink-0 overflow-hidden relative">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none"></div>
+                    <img src="${pub.image}" class="w-full h-56 md:h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="p-6 md:p-8 md:w-7/12 flex flex-col justify-center">
+                    <span class="text-xs font-bold text-[#800000] uppercase tracking-widest block mb-3">${pub.journal} • ${pub.year}</span>
+                    <h4 class="serif text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#800000] transition-colors">${pub.title}</h4>
+                    <p class="text-sm md:text-base text-gray-600 font-light mb-6 leading-relaxed">${pub.short_desc}</p>
+                    
+                    <details class="group/details mb-6">
+                        <summary class="text-xs font-bold uppercase tracking-widest text-gray-500 cursor-pointer hover:text-black flex items-center gap-2 mb-2">
+                            <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-open/details:rotate-90"></i> Abstract & Details
+                        </summary>
+                        <div class="mt-3 text-sm text-gray-600 pl-6 border-l-2 border-gray-200">
+                            <p class="mb-3 leading-relaxed"><strong>Authors:</strong> ${pub.authors}</p>
+                            <p class="leading-relaxed">${pub.abstract}</p>
+                            ${mediaHTML}
+                        </div>
+                    </details>
+                    
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <a href="${pub.link || pub.arxiv}" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest bg-gray-900 text-white px-5 py-2.5 rounded hover:bg-[#800000] transition-colors">Find out more <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                        ${pub.arxiv ? `<a href="${pub.arxiv}" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-700 border border-gray-200 px-5 py-2.5 rounded hover:bg-gray-50 transition-colors">arXiv <i data-lucide="external-link" class="w-3 h-3"></i></a>` : ''}
+                    </div>
+                </div>
+            `;
+            return div;
+        }
 
         document.addEventListener('DOMContentLoaded', () => {
+            const highList = document.getElementById('highlighted-pub-list');
+            const fullList = document.getElementById('full-pub-list');
+            const homeFeaturedList = document.getElementById('home-highlights-container');
+
+            // Find the top 5 highlights with images for the Home Page
+            const topFeatured = publicationsData.filter(p => p.highlight && p.image).slice(0, 5);
+            topFeatured.forEach(pub => {
+                homeFeaturedList.appendChild(createFeaturedCard(pub));
+            });
+
+            // Render Highlights in Research Tab
+            publicationsData.filter(p => p.highlight).forEach(pub => {
+                highList.appendChild(createPubElement(pub));
+            });
+
+            // Render Full list in Research Tab
+            publicationsData.forEach(pub => {
+                fullList.appendChild(createPubElement(pub));
+            });
+
+            // Re-initialize Lucide Icons for newly injected elements
+            lucide.createIcons();
+            
+            // Default load
             switchTab('home');
         });
     </script>
