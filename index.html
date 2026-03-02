@@ -149,7 +149,7 @@
                     <!-- Left Column: Bio with Photo (4 cols) -->
                     <div class="lg:col-span-4">
                         <div class="sticky top-28">
-                            <img src="assets/group_members/pi/bs01.jpeg" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop'" class="w-48 h-48 md:w-full md:h-auto object-cover transition-all duration-500 shadow-md mb-8 rounded-sm mx-auto md:mx-0">
+                            <img src="assets/group_members/pi/bs-01.jpg" onerror="this.src='assets/group_members/pi/bs01.jpeg'" class="w-48 h-48 md:w-full md:h-auto object-cover transition-all duration-500 shadow-md mb-8 rounded-sm mx-auto md:mx-0">
                             
                             <h2 class="serif text-3xl font-bold text-gray-900 mb-2">Bijita Sarma</h2>
                             <p class="text-xs uppercase tracking-widest text-gray-500 mb-6 font-bold">Assistant Professor, <br> Chennai Mathematical Institute (CMI) </p>
@@ -159,7 +159,7 @@
                                     Contact Me <i data-lucide="arrow-right" class="w-3 h-3"></i>
                                 </a>
                                 <div class="flex gap-4 mt-2">
-                                    <a href="https://de.linkedin.com/in/bijita-sarma-95826b69" target="_blank" class="text-gray-400 hover:text-[#0077b5] transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                                    <a href="https://www.linkedin.com/in/bijita-sarma-95826b69/" target="_blank" class="text-gray-400 hover:text-[#0077b5] transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
                                     <a href="#" target="_blank" class="text-gray-400 hover:text-black transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
                                     <a href="https://github.com/bijitasarma" target="_blank" class="text-gray-400 hover:text-black transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
                                     <a href="https://scholar.google.co.in/citations?hl=en&user=1pE-QQMAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="text-gray-400 hover:text-[#4285F4] transition-colors" title="Google Scholar"><i data-lucide="graduation-cap" class="w-5 h-5"></i></a>
@@ -486,7 +486,7 @@
                 <!-- Profile Header -->
                 <div class="flex flex-col md:flex-row gap-12 items-start mb-16">
                     <div class="w-full md:w-1/3">
-                        <img src="assets/group_members/pi/bs01.jpeg" onerror="this.src='https://api.dicebear.com/7.x/initials/svg?seed=BS&backgroundColor=800000'" class="w-full aspect-[3/4] object-cover bg-gray-100 grayscale hover:grayscale-0 transition-all duration-500 shadow-lg rounded-sm">
+                        <img src="assets/group_members/pi/bs02.jpeg" class="w-full aspect-[3/4] object-cover bg-gray-100 grayscale hover:grayscale-0 transition-all duration-500 shadow-lg rounded-sm">
                     </div>
                     <div class="w-full md:w-2/3">
                         <h2 class="serif text-4xl md:text-5xl font-bold text-gray-900 mb-2">Bijita Sarma</h2>
@@ -516,22 +516,6 @@
 
                 <!-- CV Sections -->
                 <div class="space-y-16">
-
-                    <!-- Grants & Funding -->
-                    <section>
-                        <h3 class="serif text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">Grants & Funding</h3>
-                        <div class="space-y-6">
-                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                                <div class="text-sm font-bold text-gray-400 uppercase">Current</div>
-                                <div class="md:col-span-3">
-                                    <h4 class="font-bold text-lg text-gray-900">Institutional Start-up Grant</h4>
-                                    <p class="text-gray-700 font-light">Chennai Mathematical Institute</p>
-                                    <p class="text-sm text-gray-500 italic mt-1">Role: Principal Investigator. Supporting the establishment of the QCQT research group.</p>
-                                </div>
-                            </div>
-                            <!-- Add more grants here as they are acquired -->
-                        </div>
-                    </section>
 
                     <!-- Experience -->
                     <section>
@@ -628,6 +612,23 @@
                             <li class="flex gap-2"><i data-lucide="award" class="w-4 h-4 text-[#800000]"></i> Qualified GATE & NET (2013)</li>
                             <li class="flex gap-2"><i data-lucide="award" class="w-4 h-4 text-[#800000]"></i> Anundoram Borooah Award (2005)</li>
                         </ul>
+                    </section>
+
+
+                     <!-- Grants & Funding -->
+                    <section>
+                        <h3 class="serif text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">Grants & Funding</h3>
+                        <div class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                <div class="text-sm font-bold text-gray-400 uppercase">Current</div>
+                                <div class="md:col-span-3">
+                                    <h4 class="font-bold text-lg text-gray-900">Institutional Start-up Grant</h4>
+                                    <p class="text-gray-700 font-light">Chennai Mathematical Institute</p>
+                                    <p class="text-sm text-gray-500 italic mt-1">Role: Principal Investigator. Supporting the establishment of the QCQT research group.</p>
+                                </div>
+                            </div>
+                            <!-- Add more grants here as they are acquired -->
+                        </div>
                     </section>
 
                     <!-- Talks & Presentations -->
@@ -841,28 +842,44 @@
         const publicationsData = [
             {
                 title: "Scalable Fluxonium-Transmon Architecture for Error Corrected Quantum Processors",
-                authors: "Lukas Heunisch, ..., <u>Bijita Sarma</u>, ..., Michael J Hartmann",
+                authors: "Lukas Heunisch, Longxiang Huang, Stephan Tasler, Johannes Schirk, Florian Wallner, Verena Feulner, <u>Bijita Sarma</u>, Klaus Liegener, Christian MF Schneider, Stefan Filipp, Michael J Hartmann",
                 journal: "arXiv preprint",
                 volume: "arXiv:2508.09267",
                 year: "2025",
-                doi: "",
+                doi: "https://arxiv.org/abs/2508.09267",
                 link: "https://arxiv.org/abs/2508.09267",
                 arxiv: "https://arxiv.org/abs/2508.09267",
-                abstract: "Preprint detailing a scalable architecture combining fluxonium and transmon qubits for robust error correction in near-term processors.",
+                abstract: "We propose a hybrid quantum computing architecture composed of alternating fluxonium and transmon qubits, that are coupled via transmon tunable couplers. We show that this system offers excellent scaling properties, characterized by engineered zero ZZ-crosstalk in the idle regime, a substantial reduction of level-crowding challenges through the alternating arrangement of different qubit types within the lattice, and parameter regimes that circumvent the capacitive loading problem commonly associated with fluxoniums. In numerical simulations, we show a parametrically driven CZ-gate that achieves a closed-system infidelity that is orders of magnitude below the coherence limit for gate durations >= 30 ns  using a two-tone flux pulse on the tunable coupler. Furthermore, we show that this gate scheme retains its fidelity in the presence of spectator qubits, making it a scalable solution for large lattices. Moreover, for the implementation of error correcting codes, our approach can leverage the long coherence times and large non-linearities of fluxoniums as data qubits, while fixed-frequency transmons with established readout techniques can serve as measurement ancillas.",
                 highlight: false,
                 media: null,
                 impact: null
+            },
+              {
+                title: "Designing Fast Quantum Gates using Optimal Control with a Reinforcement Learning Ansatz",
+                authors: "<u>Bijita Sarma*</u> and Michael J. Hartmann",
+                journal: "Phys. Rev. Appl.",
+                volume: "23, 014015",
+                year: "2025",
+                doi: "https://doi.org/10.1103/PhysRevApplied.23.014015",
+                link: "https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.23.014015",
+                arxiv: "https://doi.org/10.48550/arXiv.2312.16358",
+                abstract: "Fast quantum gates are crucial not only for the contemporary era of noisy intermediate-scale quantum devices but also for the prospective development of practical fault-tolerant quantum computing. Leakage errors, which arise from data qubits jumping beyond the confines of the computational subspace, are the main challenges in realizing nonadiabatically driven, fast gates. In this work, we propose and illustrate the usefulness of reinforcement learning (RL) to generate fast two-qubit gates in practical multilevel superconducting qubits. In particular, we show that the RL controller offers great effectiveness in finding piecewise constant gate-pulse sequences that act on two transmon data qubits coupled by a tunable coupler to generate a controlled-Z(cz) gate with a gate time of 10 ns and an error rate of approximately 4 x 10^-3. Using a gradient-based method to solve the same optimization problem often does not achieve.",
+                highlight: true,
+                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
+                short_desc: "In this work, we propose a reinforcement learning (RL) based approach for designing fast and high-fidelity quantum gates. By leveraging optimal control theory alongside a deep RL ansatz, we demonstrate robust gate generation suitable for near-term quantum processors.",
+                media: null,
+                impact: 4.5
             },
             {
                 title: "Precision Quantum Parameter Inference with Continuous Observation",
                 authors: "<u>Bijita Sarma</u>, Junxin Chen, Sangkha Borah",
                 journal: "arXiv preprint",
-                volume: "arXiv:2407.12650",
+                volume: "2407 12650",
                 year: "2024",
-                doi: "",
+                doi: "https://arxiv.org/abs/2407.12650",
                 link: "https://arxiv.org/abs/2407.12650",
                 arxiv: "https://arxiv.org/abs/2407.12650",
-                abstract: "We investigate precision quantum metrology techniques leveraging continuous measurement records for enhanced parameter estimation.",
+                abstract: "Quantum Parameter Estimation (QPE) is important from the perspective of both fundamental quantum research and various practical applications of quantum technologies such as for developing optimal quantum control strategies. Standard and traditional methods for QPE involve projective measurements on thousands of identically prepared quantum systems. However, these methods face limitations, particularly in terms of the required number of samples and the associated experimental resources. In this work, we present a novel method for precise QPE that diverges from conventional techniques, employs continuous measurements, and enables accurate QPE with a single quantum trajectory. In an application, we demonstrate the use of the method for the task of parameter estimation and force sensing of a levitated nanoparticle.",
                 highlight: false,
                 media: null,
                 impact: null
@@ -882,38 +899,6 @@
                 impact: null
             },
             {
-                title: "Non-Markovian feedback for optimized quantum error correction",
-                authors: "Matteo Puviani, Sangkha Borah, Remmy Zen, Jan Olle, Florian Marquardt",
-                journal: "Phys. Rev. Lett.",
-                volume: "(Accepted/Published)",
-                year: "2025",
-                doi: "",
-                link: "",
-                arxiv: "",
-                abstract: "We explore non-Markovian feedback protocols aimed at drastically optimizing quantum error correction cycles on contemporary superconducting architectures.",
-                highlight: true,
-                image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=800&auto=format&fit=crop",
-                short_desc: "A novel non-Markovian feedback protocol that drastically optimizes quantum error correction cycles on contemporary superconducting architectures.",
-                media: null,
-                impact: null
-            },
-            {
-                title: "Designing Fast Quantum Gates using Optimal Control with a Reinforcement Learning Ansatz",
-                authors: "<u>Bijita Sarma*</u> and Michael J. Hartmann",
-                journal: "Phys. Rev. Appl.",
-                volume: "23, 014015",
-                year: "2025",
-                doi: "https://doi.org/10.1103/PhysRevApplied.23.014015",
-                link: "https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.23.014015",
-                arxiv: "",
-                abstract: "In this work, we propose a reinforcement learning (RL) based approach for designing fast and high-fidelity quantum gates. By leveraging optimal control theory alongside a deep RL ansatz, we demonstrate robust gate generation suitable for near-term quantum processors.",
-                highlight: true,
-                image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
-                short_desc: "Demonstrating robust gate generation suitable for near-term quantum processors by leveraging optimal control theory alongside a deep RL ansatz.",
-                media: null,
-                impact: null
-            },
-            {
                 title: "No-Collapse Accurate Quantum Feedback Control via Conditional State Tomography",
                 authors: "Sangkha Borah, <u>Bijita Sarma*</u>",
                 journal: "Phys. Rev. Lett.",
@@ -921,11 +906,11 @@
                 year: "2023",
                 doi: "https://doi.org/10.1103/PhysRevLett.131.210803",
                 link: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.210803",
-                arxiv: "",
-                abstract: "We present a scheme for precise quantum feedback control avoiding projective wavefunction collapse. By applying conditional state tomography on the continuous measurement record, accurate state preparation and stabilization are achieved.",
+                arxiv: "https://doi.org/10.48550/arXiv.2301.07254",
+                abstract: "The effectiveness of measurement-based feedback control protocols is hampered by the presence of measurement noise, which affects the ability to accurately infer the underlying dynamics of a quantum system from noisy continuous measurement records to determine an accurate control strategy. To circumvent such limitations, this Letter explores a real-time stochastic state estimation approach that enables noise-free monitoring of the conditional dynamics including the full density matrix of the quantum system using noisy measurement records within a single quantum trajectory — a method we name as “conditional state tomography.” This, in turn, enables the development of precise measurement-based feedback control strategies that lead to effective control of quantum systems by essentially mitigating the constraints imposed by measurement noise and has potential applications in various feedback quantum control scenarios. This approach is particularly useful for reinforcement-learning-(RL) based control, where the RL-agent can be trained with arbitrary conditional averages of observables, and/or the full density matrix as input (observation), to quickly and accurately learn control strategies.",
                 highlight: true,
                 image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop",
-                short_desc: "Achieving accurate state preparation and stabilization via precise quantum feedback control, successfully avoiding projective wavefunction collapse.",
+                short_desc: "Achieving accurate state preparation and stabilization via precise quantum feedback control, in a physics informed way, successfully avoiding projective wavefunction collapse.",
                 media: null,
                 impact: null
             },
@@ -938,12 +923,12 @@
                 doi: "https://doi.org/10.1103/PhysRevResearch.4.L042038",
                 link: "https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.L042038",
                 arxiv: "",
-                abstract: "We utilize deep reinforcement learning to formulate optimized pulsing sequences for the accelerated ground-state cooling of mechanical oscillators, surpassing traditional continuous-wave schemes.",
+                abstract: "Achieving fast cooling of motional modes is a prerequisite for leveraging such bosonic quanta for high-speed quantum information processing. In this Letter, we address the aspect of reducing the time limit for cooling, below that constrained by the conventional sideband cooling techniques, and propose a scheme to apply deep reinforcement learning (DRL) to achieve this. In particular, we have numerically demonstrated how the scheme can be used effectively to accelerate the dynamic motional cooling of a macroscopic magnonic sphere, and how it can be uniformly extended to more complex systems, for example, a tripartite opto-magno-mechanical system, to obtain cooling of the motional mode below the time bound of coherent cooling. While conventional sideband cooling methods do not work beyond the well-known rotating wave approximation (RWA) regimes, our proposed DRL scheme can be applied uniformly to regimes operating within and beyond the RWA, and thus, this offers a new and complete toolkit for rapid control and generation of macroscopic quantum states for application in quantum technologies.",
                 highlight: true,
                 image: "https://images.unsplash.com/photo-1544335503-b0972412b1d3?q=80&w=800&auto=format&fit=crop",
-                short_desc: "Utilizing deep reinforcement learning to formulate optimized pulsing sequences for the accelerated ground-state cooling of mechanical oscillators.",
+                short_desc: "Utilizing deep reinforcement learning to formulate optimized pulsing sequences for the accelerated ground-state cooling of mechanical oscillators, surpassing conventional methods.",
                 media: { text: "Pulses driven by artificial intelligence tame quantum systems", publisher: "Phys.org", link: "https://phys.org/news/2022-11-pulses-driven-artificial-intelligence-quantum.html" },
-                impact: null
+                impact: 4.4
             },
             {
                 title: "Measurement based estimator scheme for continuous quantum error correction",
@@ -953,13 +938,13 @@
                 year: "2022",
                 doi: "https://doi.org/10.1103/PhysRevResearch.4.033207",
                 link: "https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.033207",
-                arxiv: "",
-                abstract: "A novel estimator scheme using continuous measurements for quantum error correction. The approach provides real-time error tracking and correction applied back to the system via feedback.",
+                arxiv: "https://doi.org/10.48550/arXiv.2203.13519",
+                abstract: "Canonical discrete quantum error correction (DQEC) schemes use projective von Neumann measurements on stabilizers to discretize the error syndromes into a finite set, and fast unitary gates are applied to recover the corrupted information. Quantum error correction (QEC) based on continuous measurement, known as continuous quantum error correction (CQEC), in principle, can be executed faster than DQEC and can also be resource efficient. However, CQEC requires meticulous filtering of noisy continuous measurement data to reliably extract error syndromes on the basis of which errors could be detected. In this paper, we show that by constructing a measurement-based estimator (MBE) of the logical qubit to be protected, which is driven by the noisy continuous measurement currents of the stabilizers, it is possible to accurately track the errors occurring on the physical qubits in real time. We use this MBE to develop a continuous quantum error correction (MBE-CQEC) scheme that can protect the logical qubit to a high degree, surpassing the performance of DQEC, and also allows QEC to be conducted either immediately or in delayed time with instantaneous feedbacks",
                 highlight: true,
                 image: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=800&auto=format&fit=crop",
-                short_desc: "Providing real-time error tracking and correction applied back to the system via feedback using a novel continuous measurement estimator.",
+                short_desc: "Providing real-time error tracking and correction applied back to the system via feedback using a continuous measurement estimator (digital twin).",
                 media: { text: "MBE-CQEC: A new scheme to correct quantum errors", publisher: "Phys.org", link: "https://phys.org/news/2022-09-mbe-cqec-scheme-quantum-errors.html" },
-                impact: "3.5"
+                impact: "4.5"
             },
             {
                 title: "Intensive cavity-magnomechanical cooling of a levitated macromagnet",
@@ -970,24 +955,28 @@
                 doi: "https://doi.org/10.1103/PhysRevLett.128.013602",
                 link: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.128.013602",
                 arxiv: "",
-                abstract: "We propose a scheme to actively cool the center-of-mass motion of a levitated macroscopic magnet using cavity magnomechanics, paving the way for macroscopic quantum states.",
+                abstract: "We describe microwave cavity-magnomechanical center-of-mass cooling of a levitated magnetic sphere. The standing magnetic component of the electromagnetic wave within a microwave cavity exerts a dynamical force on a magnonic crystalline sphere and dissipates the mechanical energy through scattering into the magnon mode. The coupling is established by the magnetic dipole interaction and enriched by the collective spin motion. We find that the final cooled phonon occupation achieved is an intensive property independent of the mass and size of the sphere, in contrast to standard optomechanical couplings. This is of particular importance for testing quantum mechanics with macroscopic objects.",
                 highlight: true,
+                image:"",
+                short_desc: "We propose a scheme to actively cool the center-of-mass motion of a levitated macroscopic magnet using cavity magnomechanics, paving the way for macroscopic quantum states.",
                 media: null,
-                impact: "8.1"
+                impact: 9.0
             },
             {
-                title: "Measurement-Based Feedback Quantum Control with Deep Reinforcement Learning for a Double-Well Nonlinear Potential",
+                title: "Measurement-Based Feedback Quantum Control with Deep Reinforcement Learning",
                 authors: "Sangkha Borah, <u>Bijita Sarma</u>, Michael Kewming, Gerard J. Milburn, Jason Twamley",
                 journal: "Phys. Rev. Lett.",
                 volume: "127, 190403",
                 year: "2021",
                 doi: "https://doi.org/10.1103/PhysRevLett.127.190403",
                 link: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.127.190403",
-                arxiv: "",
+                arxiv: "https://doi.org/10.48550/arXiv.2104.11856",
                 abstract: "Deep reinforcement learning is applied to design measurement-based feedback strategies, successfully driving and stabilizing nonclassical states in highly nonlinear double-well potentials.",
                 highlight: true,
                 media: { text: "Machine learning - a useful tool for quantum control", publisher: "Phys.org", link: "https://phys.org/news/2021-11-machine-tool-quantum.html" },
-                impact: "8.1"
+                image: "",
+                short_desc: "Deep reinforcement learning is applied to design measurement-based feedback strategies, successfully driving and stabilizing nonclassical states under non-linearity.",
+                impact: 9.0
             },
             {
                 title: "Cavity magnomechanical storage and retrieval of quantum states",
@@ -999,7 +988,9 @@
                 link: "https://iopscience.iop.org/article/10.1088/1367-2630/abf0b0",
                 arxiv: "",
                 abstract: "We investigate the storage and retrieval of microwave fields into the mechanical mode of a cavity magnomechanical system.",
-                highlight: false, media: null, impact: null
+                highlight: false, 
+                media: null, 
+                impact: null
             },
             {
                 title: "Optomechanical cooling by STIRAP-assisted energy transfer",
@@ -1136,15 +1127,18 @@
                 </div>
             ` : '';
 
+            // Set a default fallback image if the publication doesn't have one
+            const displayImage = pub.image ? pub.image : "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=800&auto=format&fit=crop";
+
             div.innerHTML = `
-                <div class="md:w-5/12 shrink-0 overflow-hidden relative">
+                <div class="md:w-5/12 shrink-0 overflow-hidden relative bg-gray-100">
                     <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none"></div>
-                    <img src="${pub.image}" class="w-full h-56 md:h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    <img src="${displayImage}" class="w-full h-56 md:h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
                 </div>
                 <div class="p-6 md:p-8 md:w-7/12 flex flex-col justify-center">
                     <span class="text-xs font-bold text-[#800000] uppercase tracking-widest block mb-3">${pub.journal} • ${pub.year}</span>
                     <h4 class="serif text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#800000] transition-colors">${pub.title}</h4>
-                    <p class="text-sm md:text-base text-gray-600 font-light mb-6 leading-relaxed">${pub.short_desc}</p>
+                    <p class="text-sm md:text-base text-gray-600 font-light mb-6 leading-relaxed">${pub.short_desc || "Read the abstract for more details about this research."}</p>
                     
                     <details class="group/details mb-6">
                         <summary class="text-xs font-bold uppercase tracking-widest text-gray-500 cursor-pointer hover:text-black flex items-center gap-2 mb-2">
@@ -1158,7 +1152,7 @@
                     </details>
                     
                     <div class="flex flex-wrap gap-3 mt-auto">
-                        <a href="${pub.link || pub.arxiv}" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest bg-gray-900 text-white px-5 py-2.5 rounded hover:bg-[#800000] transition-colors">Find out more <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                        <a href="${pub.link || pub.arxiv || '#'}" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest bg-gray-900 text-white px-5 py-2.5 rounded hover:bg-[#800000] transition-colors">Find out more <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
                         ${pub.arxiv ? `<a href="${pub.arxiv}" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-700 border border-gray-200 px-5 py-2.5 rounded hover:bg-gray-50 transition-colors">arXiv <i data-lucide="external-link" class="w-3 h-3"></i></a>` : ''}
                     </div>
                 </div>
@@ -1171,8 +1165,8 @@
             const fullList = document.getElementById('full-pub-list');
             const homeFeaturedList = document.getElementById('home-highlights-container');
 
-            // Find the top 5 highlights with images for the Home Page
-            const topFeatured = publicationsData.filter(p => p.highlight && p.image).slice(0, 5);
+            // Find all highlights with images for the Home Page
+            const topFeatured = publicationsData.filter(p => p.highlight);
             topFeatured.forEach(pub => {
                 homeFeaturedList.appendChild(createFeaturedCard(pub));
             });
